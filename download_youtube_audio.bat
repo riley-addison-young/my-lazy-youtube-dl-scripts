@@ -3,7 +3,7 @@
 :begin_script
 set /p video_url=Enter url for audio download:
 youtube-dl --extract-audio --audio-quality 0 --audio-format mp3 %video_url% || goto failed_download
-echo DOwnloaded audio.
+echo Downloaded audio.
 goto end_of_script
 
 :failed_download
