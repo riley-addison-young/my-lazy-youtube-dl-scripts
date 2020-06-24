@@ -2,8 +2,13 @@
 
 :begin_script
 set /p video_url=Enter url for video download:
-youtube-dl -f 299+140 %video_url% || goto download_137
+youtube-dl -f 299+140 %video_url% || goto download_298
 echo Downloaded 1080p60 format.
+goto end_of_script
+
+:download_298
+youtube-dl -f 298+140 %video_url% || goto download_137
+echo Downloaded 720p60 format.
 goto end_of_script
 
 :download_137
